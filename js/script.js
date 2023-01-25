@@ -6,13 +6,15 @@ function ajax_cargar_datos(){
     http.onreadystatechange = function(){
         // Validar la respuesta
         if(this.status > 200 || this.readyState == 4){
-            let res = document.getElementById("caja");
+            let res = document.getElementById("contenedor");
             // Convertir en formato JSON para hacer objetos
             const json = JSON.parse(this.responseText);
             for(const dato of json){
                 if(dato.albumId == 1){
-                    res.innerHTML += dato.albumId + dato.id + dato.title + "<a href='"+ dato.url +"'><img src='" + dato.thumbnailUrl + "'></a>" + "<br>";
-                    
+                    res.innerHTML +="<div class='caja'>" + "<div class ='albumId'><h2>Almbum ID: "+ dato.albumId +"</h2></div>" 
+                    + "<div class ='id'><h2>ID: "+ dato.id + "</h2></div>" + "<div class ='titulo'><h2>Titulo: "+ dato.title + "</h2></div>" 
+                    +"<a href='"+ dato.url +"'><img src='" + dato.thumbnailUrl + "'></a>" + "<br>" +"</div>";
+        
                 }
             
             }
@@ -32,5 +34,5 @@ document.getElementById("btnCargar").addEventListener("click",function(){
 })
 
 document.getElementById("btnLimpiar").addEventListener("click",function(){
-    document.getElementById('caja').innerHTML = "";
+    document.getElementById('contenedor').innerHTML = "";
 })

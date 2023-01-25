@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#inicio{
+    background-color: blue;
+    height: 120px;
+    width: 900px;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+
+.caja{
+    width: 860px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(0, 174, 255);
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+button{
+    border: 3px solid black;
+    border-radius: 20px;
+    height: 35px;
+    width: 200px;
+}
