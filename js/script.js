@@ -27,4 +27,10 @@ function ajax_cargar_datos(){
     http.send();
 }
 
-window.onload = ajax_cargar_datos();
+document.getElementById("btnCargar").addEventListener("click",function(){
+    ajax_cargar_datos();
+})
+
+document.getElementById("btnLimpiar").addEventListener("click",function(){
+    document.getElementById('caja').innerHTML = "";
+})
